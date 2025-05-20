@@ -1,6 +1,11 @@
 # backend-demo
 backend demo for aspiring engineers guild
 
+## Prerequisites
+Ensure you have the following installed on your local machine:
+ - Docker and Docker Compose (see https://docs.docker.com/desktop/)
+ - Git (see https://git-scm.com/)
+
 ## Project setup
 1. Clone project to your local machine:
 ```
