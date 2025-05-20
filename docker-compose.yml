@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:17
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: fedigram
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: fedigram
+  django:
+    build: ./django
+    volumes:
+      - ./django:/app
+    environment:
+      DB_NAME: fedigram
+      DB_USER: fedigram
+      DB_PASSWORD: password
+      DB_HOST: db
+    ports:
+      - "9000:9000"
+    command: sleep infinity
+volumes:
+  postgres_data:
